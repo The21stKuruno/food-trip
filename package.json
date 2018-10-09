@@ -1,0 +1,14 @@
+{
+  "name": "food-trip",
+  "version": "1.0.0",
+  "description": "Restaurant Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o  app/css/ --recursive"
+  },
+  "author": "Cris Aian Vergara",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
