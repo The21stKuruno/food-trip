@@ -29,7 +29,7 @@ a {
 // Header
 header {
   box-sizing: border-box;
-  height: 62px;
+  height: 82px;
   position: absolute;
   width: 100%;
   nav {
@@ -48,6 +48,9 @@ header {
   h1 {
     font-size: 1.4rem;
   }
+  span {
+    color: $green;
+  }
   .menu {
     justify-self: center;
     font-weight: 700;
@@ -58,15 +61,19 @@ header {
     justify-self: end;
   }
   li a {
+    color: $offGrey;
     padding: 0 10px;
   }
   .btn-signin {
     background: $white;
     border-radius: 5px;
-    color: $black;
+    color: $green;
     font-size: 1rem;
     font-weight: 700;
     padding: 10px 1.5rem;
+  }
+  .current {
+    color: $green;
   }
 }
 
@@ -78,7 +85,8 @@ header {
   height: 100vh;
   min-height: 445px;
   width: 100%;
-  padding: 70px 0;
+  padding-top: 80px;
+  padding-bottom: 40px;
   .showcase {
     display: grid;
     grid-template-rows: 2fr 1fr 1fr;
@@ -105,10 +113,11 @@ header {
     margin: 0 auto;
   }
   p {
+    color: $offGrey;
     margin-top: 20px;
   }
   .get-started {
-    background: $black;
+    background: $green;
     border-radius: 5px;
     color: $white;
     font-size: 1rem;
@@ -117,9 +126,14 @@ header {
     width: 100px;
   }
   .scroll-down {
-    color: $white;
+    color: $offGrey;
     font-size: 1rem;
     padding: 10px 1.5rem;
     width: 100px;
+  }
+  i {
+    color: $green;
+    font-size: 1.7rem;
+    margin-bottom: 7px;
   }
 }

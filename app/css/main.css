@@ -163,8 +163,8 @@ html {
   line-height: 1.4; }
 
 body {
-  background: #fff;
-  color: #fff;
+  background: #f9f9f9;
+  color: #f9f9f9;
   font-family: "Muli", Arial, Helvetica, sans-serif; }
 
 .container {
@@ -173,12 +173,12 @@ body {
   padding: 0 20px; }
 
 a {
-  color: #fff;
+  color: #f9f9f9;
   text-decoration: none; }
 
 header {
   box-sizing: border-box;
-  height: 62px;
+  height: 82px;
   position: absolute;
   width: 100%; }
   header nav {
@@ -193,6 +193,8 @@ header {
     justify-self: start; }
   header h1 {
     font-size: 1.4rem; }
+  header span {
+    color: #07d765; }
   header .menu {
     justify-self: center;
     font-weight: 700;
@@ -201,14 +203,17 @@ header {
   header .signin-here {
     justify-self: end; }
   header li a {
+    color: #d3d3d3;
     padding: 0 10px; }
   header .btn-signin {
-    background: #fff;
+    background: #f9f9f9;
     border-radius: 5px;
-    color: #24242d;
+    color: #07d765;
     font-size: 1rem;
     font-weight: 700;
     padding: 10px 1.5rem; }
+  header .current {
+    color: #07d765; }
 
 .main {
   background: url("../img/main.jpg") no-repeat bottom center;
@@ -217,7 +222,8 @@ header {
   height: 100vh;
   min-height: 445px;
   width: 100%;
-  padding: 70px 0; }
+  padding-top: 80px;
+  padding-bottom: 40px; }
   .main .showcase {
     display: grid;
     grid-template-rows: 2fr 1fr 1fr;
@@ -238,17 +244,22 @@ header {
     width: 80%;
     margin: 0 auto; }
   .main p {
+    color: #d3d3d3;
     margin-top: 20px; }
   .main .get-started {
-    background: #24242d;
+    background: #07d765;
     border-radius: 5px;
-    color: #fff;
+    color: #f9f9f9;
     font-size: 1rem;
     font-weight: 700;
     padding: 10px 1.5rem;
     width: 100px; }
   .main .scroll-down {
-    color: #fff;
+    color: #d3d3d3;
     font-size: 1rem;
     padding: 10px 1.5rem;
     width: 100px; }
+  .main i {
+    color: #07d765;
+    font-size: 1.7rem;
+    margin-bottom: 7px; }
