@@ -180,6 +180,9 @@ h2 {
   font-size: 1.5rem;
   margin-bottom: 15px; }
 
+ul {
+  list-style: none; }
+
 header {
   box-sizing: border-box;
   height: 82px;
@@ -302,6 +305,7 @@ header {
 
 .about {
   color: #24242d;
+  margin-top: 80px;
   padding-top: 80px;
   display: grid;
   grid-gap: 2rem;
@@ -335,7 +339,7 @@ header {
   background: #f3f4f6;
   margin-top: 80px;
   padding-top: 80px;
-  padding-bottom: 180px;
+  padding-bottom: 80px;
   display: grid; }
   .clients .clients-one {
     display: grid;
@@ -369,3 +373,35 @@ header {
     background: #f9f9f9;
     padding: 2rem 1rem;
     box-shadow: 0 15px 45px -15px rgba(0, 0, 0, 0.2); }
+
+footer {
+  color: #515166;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  footer h4,
+  footer i {
+    color: #07d765; }
+  footer h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem; }
+  footer li {
+    line-height: 1.3; }
+  footer .footer-one {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 1rem; }
+  footer .scroll-up {
+    align-self: center;
+    justify-self: center; }
+  footer a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #d3d3d3;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px; }
+  footer i {
+    font-size: 1.3rem; }
