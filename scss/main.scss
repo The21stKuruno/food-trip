@@ -22,6 +22,11 @@ body {
 }
 a {
   text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    color: $green;
+    transition: 0.3s;
+  }
 }
 h2 {
   font-size: 1.5rem;
@@ -82,6 +87,12 @@ header {
     font-size: 1rem;
     font-weight: 700;
     padding: 10px 1.5rem;
+    transition: 0.3s;
+    &:hover {
+      background: $green;
+      color: $white;
+      transition: 0.3s;
+    }
   }
 }
 
@@ -120,7 +131,14 @@ header {
     color: $white;
     font-weight: 700;
     padding: 10px 1.5rem;
+    transition: 0.3s;
+    &:hover {
+      background: $white;
+      color: $green;
+      transition: 0.3s;
+    }
   }
+
   .scroll-down {
     padding: 5px;
   }
@@ -280,8 +298,7 @@ footer {
   background: #fff;
   color: $lightBlack;
   padding-top: 80px;
-  h4,
-  i {
+  h4 {
     color: $green;
   }
   h4 {
@@ -300,13 +317,20 @@ footer {
       background: #fff;
       border-radius: 50%;
       box-shadow: 0 5px 45px -5px rgba(0, 0, 0, 0.2);
+      color: $green;
       display: flex;
       flex-direction: column;
       justify-content: center;
       height: 50px;
       padding: 5px;
       text-align: center;
+      transition: 0.3s;
       width: 50px;
+      &:hover {
+        background: $green;
+        color: $white;
+        transition: 0.3s;
+      }
     }
     li {
       margin: 3px 0;
@@ -314,6 +338,9 @@ footer {
     }
     a {
       color: $lightBlack;
+      &:hover {
+        color: $offBlack;
+      }
     }
     p {
       line-height: 1.5;
@@ -341,6 +368,11 @@ footer {
     i {
       color: $offGrey;
       font-size: 1.3rem;
+      transition: 0.3s;
+      &:hover {
+        color: $green;
+        transition: 0.3s;
+      }
     }
   }
 }

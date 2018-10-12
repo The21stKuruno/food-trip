@@ -172,7 +172,11 @@ body {
   padding: 0 20px; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 0.3s; }
+  a:hover {
+    color: #07d765;
+    transition: 0.3s; }
 
 h2 {
   font-size: 1.5rem;
@@ -222,7 +226,12 @@ header {
     color: #07d765;
     font-size: 1rem;
     font-weight: 700;
-    padding: 10px 1.5rem; }
+    padding: 10px 1.5rem;
+    transition: 0.3s; }
+    header .btn-signin:hover {
+      background: #07d765;
+      color: #f9f9f9;
+      transition: 0.3s; }
 
 .main {
   background: url("../img/main.jpg") no-repeat bottom center;
@@ -253,7 +262,12 @@ header {
     border-radius: 5px;
     color: #f9f9f9;
     font-weight: 700;
-    padding: 10px 1.5rem; }
+    padding: 10px 1.5rem;
+    transition: 0.3s; }
+    .main .get-started:hover {
+      background: #f9f9f9;
+      color: #07d765;
+      transition: 0.3s; }
   .main .scroll-down {
     padding: 5px; }
   .main i {
@@ -380,8 +394,7 @@ footer {
   background: #fff;
   color: #515166;
   padding-top: 80px; }
-  footer h4,
-  footer i {
+  footer h4 {
     color: #07d765; }
   footer h4 {
     font-size: 1.1rem;
@@ -397,18 +410,26 @@ footer {
       background: #fff;
       border-radius: 50%;
       box-shadow: 0 5px 45px -5px rgba(0, 0, 0, 0.2);
+      color: #07d765;
       display: flex;
       flex-direction: column;
       justify-content: center;
       height: 50px;
       padding: 5px;
       text-align: center;
+      transition: 0.3s;
       width: 50px; }
+      footer .footer-one #top:hover {
+        background: #07d765;
+        color: #f9f9f9;
+        transition: 0.3s; }
     footer .footer-one li {
       margin: 3px 0;
       padding: 5px 0; }
     footer .footer-one a {
       color: #515166; }
+      footer .footer-one a:hover {
+        color: #8f96a8; }
     footer .footer-one p {
       line-height: 1.5;
       color: #515166; }
@@ -428,4 +449,8 @@ footer {
       color: #d3d3d3; }
     footer .footer-two i {
       color: #d3d3d3;
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      transition: 0.3s; }
+      footer .footer-two i:hover {
+        color: #07d765;
+        transition: 0.3s; }
