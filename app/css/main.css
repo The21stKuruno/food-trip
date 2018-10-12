@@ -184,8 +184,10 @@ ul {
 li {
   padding-left: 0; }
 
+.current {
+  color: #07d765; }
+
 header {
-  box-sizing: border-box;
   height: 82px;
   position: absolute;
   width: 100%; }
@@ -197,6 +199,8 @@ header {
   header .nav-item {
     display: grid;
     align-content: center; }
+  header #icon {
+    width: 100px; }
   header h1 {
     color: #f9f9f9;
     font-size: 1.4rem; }
@@ -209,7 +213,7 @@ header {
     justify-self: center; }
   header .signin-here {
     justify-self: end; }
-  header a {
+  header li a {
     color: #d3d3d3;
     padding: 0 10px; }
   header .btn-signin {
@@ -219,8 +223,6 @@ header {
     font-size: 1rem;
     font-weight: 700;
     padding: 10px 1.5rem; }
-  header .current {
-    color: #07d765; }
 
 .main {
   background: url("../img/main.jpg") no-repeat bottom center;
@@ -253,13 +255,14 @@ header {
     font-weight: 700;
     padding: 10px 1.5rem; }
   .main .scroll-down {
-    color: #d3d3d3;
-    padding: 10px 1.5rem;
-    width: 100px; }
+    padding: 5px; }
   .main i {
     color: #07d765;
-    font-size: 1.7rem;
-    margin-bottom: 7px; }
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .main span {
+    color: #d3d3d3;
+    display: block; }
 
 .recipe {
   color: #24242d;
@@ -305,6 +308,12 @@ header {
     color: #515166;
     line-height: 1.6;
     margin-bottom: 40px; }
+  .about .about-two {
+    align-self: center; }
+  .about a {
+    color: #515166;
+    font-size: 14px;
+    padding: 7px; }
   .about i {
     display: inline-flex;
     background: #07d765;
@@ -314,14 +323,10 @@ header {
     font-size: 10px;
     height: 20px;
     justify-content: center;
+    margin-right: 7px;
     padding: 10px;
     text-align: center;
     width: 20px; }
-  .about a {
-    color: #515166;
-    font-size: 14px;
-    margin: 5px;
-    padding: 7px; }
 
 .clients {
   background: #f3f4f6;
@@ -351,7 +356,8 @@ header {
   .clients .box-item {
     background: #f9f9f9;
     border-radius: 4px;
-    box-shadow: 0 15px 45px -15px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 15px 45px -15px rgba(0, 0, 0, 0.2);
+    padding-bottom: 30px; }
   .clients .profile-name {
     background: #07d765;
     border-radius: 4px 4px 0 0;
@@ -374,9 +380,6 @@ footer {
   background: #fff;
   color: #515166;
   padding-top: 80px; }
-  footer li {
-    line-height: 1.4;
-    font-size: 1rem; }
   footer h4,
   footer i {
     color: #07d765; }
@@ -390,7 +393,7 @@ footer {
     footer .footer-one .scroll-up {
       align-self: center;
       justify-self: center; }
-    footer .footer-one a {
+    footer .footer-one #top {
       background: #fff;
       border-radius: 50%;
       box-shadow: 0 5px 45px -5px rgba(0, 0, 0, 0.2);
@@ -401,6 +404,14 @@ footer {
       padding: 5px;
       text-align: center;
       width: 50px; }
+    footer .footer-one li {
+      margin: 3px 0;
+      padding: 5px 0; }
+    footer .footer-one a {
+      color: #515166; }
+    footer .footer-one p {
+      line-height: 1.5;
+      color: #515166; }
     footer .footer-one i {
       font-size: 1.3rem; }
   footer .footer-two {
