@@ -126,15 +126,14 @@ header {
     margin-top: 20px;
   }
   .get-started {
-    background: $green;
+    border: 2px solid $green;
     border-radius: 5px;
     color: $white;
     font-weight: 700;
     padding: 10px 1.5rem;
     transition: 0.3s;
     &:hover {
-      background: $white;
-      color: $green;
+      background: $green;
       transition: 0.3s;
     }
   }
@@ -199,7 +198,7 @@ header {
   color: $black;
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr;
   margin-top: 160px;
   img {
     border-radius: 4px;
@@ -208,15 +207,12 @@ header {
   p {
     color: $lightBlack;
     line-height: 1.6;
-    margin-bottom: 40px;
-  }
-  .about-two {
-    align-self: center;
+    margin-bottom: 25px;
   }
   a {
     color: $lightBlack;
     font-size: 14px;
-    padding: 7px;
+    padding: 7px 0;
   }
   i {
     display: inline-flex;
@@ -263,7 +259,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 2rem;
-    margin-top: 80px;
+    margin-top: 50px;
   }
   .box-item {
     background: $white;
@@ -298,39 +294,15 @@ footer {
   background: #fff;
   color: $lightBlack;
   padding-top: 80px;
-  h4 {
-    color: $green;
-  }
-  h4 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
   .footer-one {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
-    .scroll-up {
-      align-self: center;
-      justify-self: center;
-    }
-    #top {
-      background: #fff;
-      border-radius: 50%;
-      box-shadow: 0 5px 45px -5px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    h4 {
       color: $green;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 50px;
-      padding: 5px;
-      text-align: center;
-      transition: 0.3s;
-      width: 50px;
-      &:hover {
-        background: $green;
-        color: $white;
-        transition: 0.3s;
-      }
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
     }
     li {
       margin: 3px 0;
@@ -343,36 +315,73 @@ footer {
       }
     }
     p {
-      line-height: 1.5;
       color: $lightBlack;
-    }
-    i {
-      font-size: 1.3rem;
+      line-height: 1.5;
     }
   }
+  // footer one end
   .footer-two {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    padding: 100px 0 30px 0;
-    li {
-      display: inline-block;
-      padding: 0 10px;
-    }
-    li:last-child {
-      padding-right: 0;
+    border-top: 1px solid #eaeaea;
+    box-shadow: 0 -2px 5px -5px rgba(0, 0, 0, 0.2);
+    margin-top: 80px;
+    padding: 20px 0;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
     }
     .copy {
-      color: $offGrey;
+      color: $offBlack;
     }
-    i {
-      color: $offGrey;
+    .scroll-up {
+      justify-self: center;
+    }
+    .social-links {
+      justify-self: end;
+    }
+    a {
+      color: $offBlack;
       font-size: 1.3rem;
+      justify-self: end;
       transition: 0.3s;
       &:hover {
         color: $green;
         transition: 0.3s;
       }
     }
+    #top {
+      background: #fff;
+      border: 1px solid #eaeaea;
+      border-bottom: 0;
+      border-left: 0;
+      border-radius: 50%;
+      border-right: 0;
+      box-shadow: 0 -4px 5px -5px rgba(0, 0, 0, 0.2);
+      color: $green;
+      display: flex;
+      flex-direction: column;
+      height: 50px;
+      justify-content: center;
+      margin-top: -90%;
+      padding: 5px;
+      text-align: center;
+      transition: 0.3s;
+      width: 50px;
+      &:hover {
+        color: $white;
+        background: $green;
+        border: 0;
+        box-shadow: 0 0 0 0;
+        transition: 0.3s;
+      }
+    }
+    ul li {
+      display: inline-block;
+      padding: 0 10px;
+    }
+    li:last-child {
+      padding-right: 0;
+    }
   }
+  //footer two end
 }
+// footer code
