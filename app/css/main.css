@@ -323,10 +323,12 @@ header {
   .main i {
     color: #07d765;
     font-size: 2rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    transition: 0.3s; }
   .main span {
     color: #d3d3d3;
-    display: block; }
+    display: block;
+    transition: 0.3s; }
 
 .recipe {
   color: #24242d;
@@ -348,7 +350,10 @@ header {
   .recipe figure {
     border-radius: 3px;
     box-shadow: 0 15px 45px -15px rgba(0, 0, 0, 0.2);
-    padding: 30px 1rem; }
+    padding: 30px 1rem;
+    transition: all 0.2s ease-in-out; }
+    .recipe figure:hover {
+      transform: scale(1.1); }
   .recipe img {
     border-radius: 3px;
     margin-bottom: 30px;
@@ -394,6 +399,7 @@ header {
     background: #07d765;
     color: #f9f9f9;
     border-radius: 50%;
+    border: 1px solid #07d765;
     flex-direction: column;
     font-size: 10px;
     height: 20px;
@@ -401,7 +407,12 @@ header {
     margin-right: 7px;
     padding: 10px;
     text-align: center;
-    width: 20px; }
+    width: 20px;
+    transition: 0.3s; }
+  .about #watch-it.active {
+    border: 1px solid #07d765;
+    color: #07d765;
+    background: #f9f9f9; }
 
 .clients {
   background: #f3f4f6;
@@ -436,7 +447,10 @@ header {
     background: #f9f9f9;
     border-radius: 4px;
     box-shadow: 0 15px 45px -15px rgba(0, 0, 0, 0.2);
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    transition: all 0.2s ease-in-out; }
+    .clients .box-item:hover {
+      transform: scale(1.1); }
   .clients .profile-name {
     background: #07d765;
     border-radius: 4px 4px 0 0;
@@ -536,9 +550,10 @@ footer {
       margin-top: -90%;
       padding: 5px;
       text-align: center;
-      transition: 0.3s;
-      width: 50px; }
+      width: 50px;
+      transition: all 0.2s ease-in-out; }
       footer .footer-two #top:hover {
+        transform: scale(1.1);
         color: #f9f9f9;
         background: #07d765;
         border: 0;

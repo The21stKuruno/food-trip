@@ -2,6 +2,20 @@ $(function() {
   setDropNav();
   setScrollTop();
   setScrollDown();
+
+  // Play button
+  $(".play").hover(function() {
+    $("#watch-it").toggleClass("active");
+  });
+  // Arrow down
+  $(".scroll-down").hover(
+    function() {
+      $(".span-down").css("color", "#f9f9f9");
+    },
+    function() {
+      $(".span-down").css("color", "#d3d3d3");
+    }
+  );
 });
 
 function setDropNav() {
