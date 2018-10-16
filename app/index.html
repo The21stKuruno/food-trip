@@ -11,6 +11,9 @@
     crossorigin="anonymous">
   <!-- Css -->
   <link rel="stylesheet" href="css/main.css">
+  <!-- Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -18,11 +21,12 @@
   <header>
     <nav class="container">
       <div class="logo nav-item">
-        <a id="icon" href="index.html">
+        <a id="logo-icon" href="index.html">
           <h1><span>Food.</span>Trip</h1>
         </a>
       </div>
-      <ul class="menu nav-item">
+      <a href="#" class="nav-item burger-icon"><i class="fas fa-bars"></i></a>
+      <ul class="menu nav-item" id="dropbar">
         <li><a class="current" href="#">Home</a></li>
         <li><a href="#">Menu</a></li>
         <li><a href="#">Buffets</a></li>
@@ -46,7 +50,7 @@
         <a href="#" class="get-started">Get Started</a>
       </div>
       <div class="showcase-item show-three">
-        <a href="#" class="scroll-down">
+        <a href="#recipe-section" id="recipe" class="scroll-down">
           <i class="fas fa-long-arrow-alt-down"></i>
           <span>Scroll Down</span>
         </a>
@@ -54,7 +58,7 @@
     </div>
   </section>
   <!-- Recipe -->
-  <section class="recipe container">
+  <section id="recipe-section" class="recipe container">
     <div class="recipe-item recipe-one">
       <h2>Most Popular Recipe</h2>
       <p>Serving the perfect blend of taste, service, & price.</p>
@@ -86,12 +90,12 @@
   <!-- About Us -->
   <section class="about container">
     <div class="about-item about-one">
-      <img src="https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        alt="">
+      <img src="img/about2.jpg" alt="">
     </div>
+    <!-- https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 -->
     <div class="about-item about-two">
       <h2>About Us</h2>
-      <p>Since 2000, Food Trip Restaurant has been serving up Mediterranean and American cuisine to the Georgetwon and
+      <p>Since 2000, Food Trip Restaurant has been serving up Mediterranean and American cuisine to the Georgetown and
         surrounding areas. Food Trip's has become a destination of Georgetown locals as well as international travelers
         from around the country seeking authentic Middle Eastern cuisine. Food Trip’s provides great food in a warm and
         welcoming environment with an unique atomosphere.</p>
@@ -105,7 +109,7 @@
   <section class="clients">
     <div class="container">
       <div class="clients-item clients-one">
-        <h2>What our customer say?</h2>
+        <h2>What do our customers say?</h2>
         <p>Reviews of Food Trip's regular customers, be sure to check it out.</p>
       </div>
       <div class="clients-item clients-two">

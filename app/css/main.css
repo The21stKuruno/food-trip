@@ -195,31 +195,70 @@ header {
   height: 82px;
   position: absolute;
   width: 100%; }
+  @media screen and (max-width: 668px) {
+    header {
+      background: #24242d; } }
   header nav {
     display: grid;
     font-size: 1.1rem;
     grid-template-columns: repeat(3, auto);
-    height: 100%; }
+    height: 100%;
+    align-content: center; }
+    @media screen and (max-width: 768px) {
+      header nav {
+        grid-template-columns: repeat(2, auto); } }
   header .nav-item {
     display: grid;
     align-content: center; }
-  header #icon {
+  header #logo-icon {
     width: 100px; }
   header h1 {
     color: #f9f9f9;
     font-size: 1.4rem; }
   header span {
     color: #07d765; }
+  header .burger-icon {
+    color: #f9f9f9;
+    display: none;
+    font-size: 1.7rem; }
+    header .burger-icon:hover {
+      color: #07d765; }
+    @media screen and (max-width: 668px) {
+      header .burger-icon {
+        align-self: center;
+        display: block;
+        justify-self: end; } }
   header .menu {
     font-weight: 700;
     grid-template-columns: repeat(4, auto);
     grid-column-gap: 1rem;
     justify-self: center; }
+    @media screen and (max-width: 768px) {
+      header .menu {
+        justify-self: end; } }
+    @media screen and (max-width: 668px) {
+      header .menu {
+        position: absolute;
+        top: 82px;
+        background: #f9f9f9;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        transition: 0.3s;
+        grid-gap: 2rem; } }
+  header #dropbar.visible {
+    height: 70vh;
+    transition: 0.3s; }
   header .signin-here {
     justify-self: end; }
   header li a {
     color: #d3d3d3;
     padding: 0 10px; }
+    @media screen and (max-width: 668px) {
+      header li a {
+        color: #8f96a8; } }
   header .btn-signin {
     background: #f9f9f9;
     border-radius: 5px;
@@ -232,13 +271,17 @@ header {
       background: #07d765;
       color: #f9f9f9;
       transition: 0.3s; }
+    @media screen and (max-width: 768px) {
+      header .btn-signin {
+        display: none; } }
 
 .main {
   background: url("../img/main.jpg") no-repeat bottom center;
   background-size: cover;
   box-sizing: border-box;
   height: 100vh;
-  min-height: 445px;
+  min-height: 570px;
+  min-width: 321px;
   padding-top: 80px;
   padding-bottom: 40px;
   width: 100%; }
@@ -254,6 +297,14 @@ header {
   .main h1 {
     font-size: 2.7rem;
     width: 80%; }
+    @media screen and (max-width: 768px) {
+      .main h1 {
+        font-size: 2rem;
+        width: 90%; } }
+    @media screen and (max-width: 668px) {
+      .main h1 {
+        font-size: 1.7rem;
+        width: 100%; } }
   .main p {
     color: #d3d3d3;
     margin-top: 20px; }
@@ -291,6 +342,9 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 2rem; }
+    @media screen and (max-width: 668px) {
+      .recipe .recipe-two {
+        grid-template-columns: 1fr; } }
   .recipe figure {
     border-radius: 3px;
     box-shadow: 0 15px 45px -15px rgba(0, 0, 0, 0.2);
@@ -303,6 +357,10 @@ header {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-around; }
+    @media screen and (max-width: 668px) {
+      .recipe .name-price {
+        justify-content: space-between;
+        padding: 0 1rem; } }
   .recipe h4 {
     font-weight: 400; }
   .recipe span {
@@ -312,15 +370,21 @@ header {
   color: #24242d;
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-top: 160px; }
+  @media screen and (max-width: 958px) {
+    .about {
+      margin-top: 80px; } }
+  @media screen and (max-width: 958px) {
+    .about .about-one {
+      display: none; } }
   .about img {
     border-radius: 4px;
     width: 100%; }
   .about p {
     color: #515166;
     line-height: 1.6;
-    margin-bottom: 25px; }
+    margin-bottom: 1rem; }
   .about a {
     color: #515166;
     font-size: 14px;
@@ -357,13 +421,17 @@ header {
     text-align: center; }
   .clients .clients-two p {
     box-sizing: border-box;
-    margin: 40px 12px; }
+    margin: 40px 1.7rem; }
   .clients .clients-two {
     border-radius: 4px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 2rem;
     margin-top: 50px; }
+    @media screen and (max-width: 668px) {
+      .clients .clients-two {
+        grid-gap: 3rem;
+        grid-template-columns: 1fr; } }
   .clients .box-item {
     background: #f9f9f9;
     border-radius: 4px;
@@ -376,7 +444,7 @@ header {
     align-items: center;
     grid-gap: 1rem;
     grid-template-columns: 50px auto;
-    padding: 12px; }
+    padding: 12px 1.7rem; }
   .clients img {
     border: 5px solid #f9f9f9;
     border-radius: 50%;
@@ -396,6 +464,10 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     justify-content: space-between; }
+    @media screen and (max-width: 668px) {
+      footer .footer-one {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem; } }
     footer .footer-one h4 {
       color: #07d765;
       font-size: 1.1rem;
@@ -417,13 +489,29 @@ footer {
     padding: 20px 0; }
     footer .footer-two .container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); }
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem; }
+      @media screen and (max-width: 668px) {
+        footer .footer-two .container {
+          grid-template-columns: 1fr;
+          grid-template-areas: "scroll" "copy" "social"; } }
     footer .footer-two .copy {
       color: #8f96a8; }
+      @media screen and (max-width: 668px) {
+        footer .footer-two .copy {
+          justify-self: center;
+          grid-area: copy; } }
     footer .footer-two .scroll-up {
       justify-self: center; }
+      @media screen and (max-width: 668px) {
+        footer .footer-two .scroll-up {
+          grid-area: scroll; } }
     footer .footer-two .social-links {
       justify-self: end; }
+      @media screen and (max-width: 668px) {
+        footer .footer-two .social-links {
+          justify-self: center;
+          grid-area: social; } }
     footer .footer-two a {
       color: #8f96a8;
       font-size: 1.3rem;

@@ -4,6 +4,7 @@
 // Import
 @import "variables";
 @import "resets";
+@import "mixins";
 
 // My Css Code
 // Global
@@ -47,17 +48,24 @@ header {
   height: 82px;
   position: absolute;
   width: 100%;
+  @include mQ(668px) {
+    background: $black;
+  }
   nav {
     display: grid;
     font-size: 1.1rem;
     grid-template-columns: repeat(3, auto);
     height: 100%;
+    align-content: center;
+    @include mQ(768px) {
+      grid-template-columns: repeat(2, auto);
+    }
   }
   .nav-item {
     display: grid;
     align-content: center;
   }
-  #icon {
+  #logo-icon {
     width: 100px;
   }
   h1 {
@@ -67,11 +75,43 @@ header {
   span {
     color: $green;
   }
+  .burger-icon {
+    color: $white;
+    display: none;
+    font-size: 1.7rem;
+    &:hover {
+      color: $green;
+    }
+    @include mQ(668px) {
+      align-self: center;
+      display: block;
+      justify-self: end;
+    }
+  }
   .menu {
     font-weight: 700;
     grid-template-columns: repeat(4, auto);
     grid-column-gap: 1rem;
     justify-self: center;
+    @include mQ(768px) {
+      justify-self: end;
+    }
+    @include mQ(668px) {
+      position: absolute;
+      top: 82px;
+      background: $white;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      width: 100%;
+      overflow: hidden;
+      height: 0;
+      transition: 0.3s;
+      grid-gap: 2rem;
+    }
+  }
+  #dropbar.visible {
+    height: 70vh;
+    transition: 0.3s;
   }
   .signin-here {
     justify-self: end;
@@ -79,6 +119,9 @@ header {
   li a {
     color: $offGrey;
     padding: 0 10px;
+    @include mQ(668px) {
+      color: $offBlack;
+    }
   }
   .btn-signin {
     background: $white;
@@ -93,6 +136,9 @@ header {
       color: $white;
       transition: 0.3s;
     }
+    @include mQ(768px) {
+      display: none;
+    }
   }
 }
 
@@ -102,7 +148,8 @@ header {
   background-size: cover;
   box-sizing: border-box;
   height: 100vh;
-  min-height: 445px;
+  min-height: 570px;
+  min-width: 321px;
   padding-top: 80px;
   padding-bottom: 40px;
   width: 100%;
@@ -120,6 +167,14 @@ header {
   h1 {
     font-size: 2.7rem;
     width: 80%;
+    @include mQ(768px) {
+      font-size: 2rem;
+      width: 90%;
+    }
+    @include mQ(668px) {
+      font-size: 1.7rem;
+      width: 100%;
+    }
   }
   p {
     color: $offGrey;
@@ -169,6 +224,9 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 2rem;
+    @include mQ(668px) {
+      grid-template-columns: 1fr;
+    }
   }
   figure {
     border-radius: 3px;
@@ -184,6 +242,10 @@ header {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-around;
+    @include mQ(668px) {
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
   }
   h4 {
     font-weight: 400;
@@ -198,8 +260,16 @@ header {
   color: $black;
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-top: 160px;
+  @include mQ(958px) {
+    margin-top: 80px;
+  }
+  .about-one {
+    @include mQ(958px) {
+      display: none;
+    }
+  }
   img {
     border-radius: 4px;
     width: 100%;
@@ -207,7 +277,7 @@ header {
   p {
     color: $lightBlack;
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom: 1rem;
   }
   a {
     color: $lightBlack;
@@ -252,7 +322,7 @@ header {
   }
   .clients-two p {
     box-sizing: border-box;
-    margin: 40px 12px;
+    margin: 40px 1.7rem;
   }
   .clients-two {
     border-radius: 4px;
@@ -260,6 +330,10 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 2rem;
     margin-top: 50px;
+    @include mQ(668px) {
+      grid-gap: 3rem;
+      grid-template-columns: 1fr;
+    }
   }
   .box-item {
     background: $white;
@@ -274,7 +348,7 @@ header {
     align-items: center;
     grid-gap: 1rem;
     grid-template-columns: 50px auto;
-    padding: 12px;
+    padding: 12px 1.7rem;
   }
   img {
     border: 5px solid $white;
@@ -299,6 +373,10 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     justify-content: space-between;
+    @include mQ(668px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 3rem;
+    }
     h4 {
       color: $green;
       font-size: 1.1rem;
@@ -328,15 +406,34 @@ footer {
     .container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      @include mQ(668px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "scroll"
+          "copy"
+          "social";
+      }
     }
     .copy {
       color: $offBlack;
+      @include mQ(668px) {
+        justify-self: center;
+        grid-area: copy;
+      }
     }
     .scroll-up {
       justify-self: center;
+      @include mQ(668px) {
+        grid-area: scroll;
+      }
     }
     .social-links {
       justify-self: end;
+      @include mQ(668px) {
+        justify-self: center;
+        grid-area: social;
+      }
     }
     a {
       color: $offBlack;
