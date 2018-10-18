@@ -4,11 +4,14 @@
   "description": "Restaurant Website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o  app/css/ --recursive"
+    "sass": "node-sass -w scss/ -o  app/css/ --recursive",
+    "deploy": "gh-pages -d app"
   },
   "author": "Cris Aian Vergara",
   "license": "MIT",
+  "homepage": "https://The21stKuruno.github.io/foodtrip",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.9.3"
   }
 }
