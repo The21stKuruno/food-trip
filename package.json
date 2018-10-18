@@ -9,7 +9,7 @@
   },
   "author": "Cris Aian Vergara",
   "license": "MIT",
-  "homepage": "https://The21stKuruno.github.io/foodtrip",
+  "homepage": "https://crisaianvergara.github.io/foodtrip",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.9.3"
